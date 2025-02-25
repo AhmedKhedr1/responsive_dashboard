@@ -17,7 +17,7 @@ class _HomeViewState extends State<HomeView> {
     return Scaffold(
         key: Scaffoldkey,
         backgroundColor: Color(0xffdbdbdb),
-        appBar: AppBar(
+        appBar:MediaQuery.of(context).size.width<932 ?AppBar(
           backgroundColor: Colors.black,
           leading: IconButton(
             onPressed: () {
@@ -26,7 +26,7 @@ class _HomeViewState extends State<HomeView> {
             icon: Icon(Icons.menu),
             color: Colors.white,
           ),
-        ),
+        ):null,
         drawer: Customdrawer(),
         body: Homeviewbody());
   }
