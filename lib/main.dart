@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dashboard/Views/HomeView.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,8 +11,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    var Height = MediaQuery.of(context).size.height;
-    var Width = MediaQuery.of(context).size.width;
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-);}}
+      debugShowCheckedModeBanner: false,
+      home: HomeView(),
+    );
+  }
+}
