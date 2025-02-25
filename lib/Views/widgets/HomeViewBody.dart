@@ -1,6 +1,8 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/Views/widgets/CustomListView.dart';
-import 'package:responsive_dashboard/Views/widgets/CustomSliverGrid.dart';
+import 'package:responsive_dashboard/Views/widgets/MobileLayout.dart';
+import 'package:responsive_dashboard/Views/widgets/TabletLayout.dart';
 
 class Homeviewbody extends StatelessWidget {
   const Homeviewbody({super.key});
@@ -9,17 +11,13 @@ class Homeviewbody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
-      child: CustomScrollView(
-        slivers: [
-          SliverToBoxAdapter(
-            child: SizedBox(
-              height: 12,
-            ),
-          ),
-          Customslivergrid(),
-          CustomSliverlistview()
-        ],
-      ),
+      child: LayoutBuilder(builder: (context, constrains) {
+        if (constrains.maxWidth > 600) {
+          return TabletLayout();
+        } else {
+          return MobileLayout();
+        }
+      }),
     );
   }
 }
