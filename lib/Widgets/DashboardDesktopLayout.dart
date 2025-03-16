@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dashboard/Widgets/CustomDrawer.dart';
 
 class Dashboarddesktoplayout extends StatelessWidget {
   const Dashboarddesktoplayout({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Row(
+      children: [
+        Expanded(child: Customdrawer()),
+      ],
+    );
   }
 }
