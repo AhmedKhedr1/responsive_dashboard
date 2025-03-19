@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dashboard/Widgets/AllExpensess_item.dart';
 import 'package:responsive_dashboard/Widgets/All_Expensess_Header.dart';
 
 class AllExpenses extends StatelessWidget {
@@ -15,6 +16,7 @@ class AllExpenses extends StatelessWidget {
       child: Column(
         children: [
           AllExpensessHeader(),
+          AllexpensessItem(),
         ],
       ),
     );
