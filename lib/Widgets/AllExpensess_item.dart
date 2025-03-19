@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:responsive_dashboard/Widgets/AllExpensesItemHeader.dart';
+import 'package:responsive_dashboard/models/AllExpensesItemModel.dart';
 
 class AllexpensessItem extends StatelessWidget {
-  const AllexpensessItem({super.key});
-
+  const AllexpensessItem({super.key, required this.ItemModel});
+  final Allexpensesitemmodel ItemModel;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -16,27 +17,12 @@ class AllexpensessItem extends StatelessWidget {
         ),
       ),
       child: Column(
-        children: [AllExpensesItemHeader(image: '',)],
+        children: [
+          AllExpensesItemHeader(
+            image: ItemModel.image,
+          )
+        ],
       ),
-    );
-  }
-}
-
-class AllExpensesItemHeader extends StatelessWidget {
-  const AllExpensesItemHeader({super.key, required this.image});
-  final String image;
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Container(
-          width: 60,
-          height: 60,
-          decoration:
-              ShapeDecoration(shape: OvalBorder(), color: Color(0xfffafafa)),
-          child: SvgPicture.asset(image),
-        )
-      ],
     );
   }
 }
