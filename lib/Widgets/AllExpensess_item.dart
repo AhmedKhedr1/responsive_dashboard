@@ -1,28 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/Widgets/AllExpensesItemHeader.dart';
+import 'package:responsive_dashboard/Widgets/InActive_and_Active_Allexpenses_item.dart';
 import 'package:responsive_dashboard/models/AllExpensesItemModel.dart';
 
 class AllexpensessItem extends StatelessWidget {
-  const AllexpensessItem({super.key, required this.ItemModel});
+  const AllexpensessItem(
+      {super.key, required this.ItemModel, required this.isSelected});
   final Allexpensesitemmodel ItemModel;
+  final bool isSelected;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
-      decoration: ShapeDecoration(
-        color: Colors.white,
-        shape: RoundedRectangleBorder(
-          side: BorderSide(width: 1, color: Color(0xfff1f1f1)),
-          borderRadius: BorderRadius.circular(12),
-        ),
-      ),
-      child: Column(
-        children: [
-          AllExpensesItemHeader(
-            image: ItemModel.image,
-          )
-        ],
-      ),
-    );
+    return ActiveAllexpensesitem(ItemModel: ItemModel);
   }
 }

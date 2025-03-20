@@ -12,12 +12,18 @@ class Dashboarddesktoplayout extends StatelessWidget {
         Expanded(
           child: Customdrawer(),
         ),
-        SizedBox(width: 32,),
+        SizedBox(
+          width: 32,
+        ),
         Expanded(
-          flex: 2,
+            flex: 2,
             child: Column(
-          children: [Expanded(child: AllExpenses())],
-        ))
+              children: [
+                Expanded(
+                  child: AllExpenses(),
+                ),
+              ],
+            ))
       ],
     );
   }
