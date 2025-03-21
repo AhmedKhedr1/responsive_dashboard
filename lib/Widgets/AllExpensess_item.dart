@@ -9,6 +9,8 @@ class AllexpensessItem extends StatelessWidget {
   final bool isSelected;
   @override
   Widget build(BuildContext context) {
-    return ActiveAllexpensesitem(ItemModel: ItemModel);
+    return isSelected
+        ? ActiveAllexpensesitem(ItemModel: ItemModel)
+        : InActiveAllexpensesitem(ItemModel: ItemModel);
   }
 }
