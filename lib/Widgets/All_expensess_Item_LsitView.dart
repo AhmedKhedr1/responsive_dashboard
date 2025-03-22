@@ -3,9 +3,15 @@ import 'package:responsive_dashboard/Widgets/AllExpensess_item.dart';
 import 'package:responsive_dashboard/models/AllExpensesItemModel.dart';
 import 'package:responsive_dashboard/utils/Appimages.dart';
 
-class AllExpensessItemLsitview extends StatelessWidget {
+class AllExpensessItemLsitview extends StatefulWidget {
   AllExpensessItemLsitview({super.key});
 
+  @override
+  State<AllExpensessItemLsitview> createState() =>
+      _AllExpensessItemLsitviewState();
+}
+
+class _AllExpensessItemLsitviewState extends State<AllExpensessItemLsitview> {
   final items = [
     const Allexpensesitemmodel(
         image: Assets.imagesBalance,
@@ -23,6 +29,8 @@ class AllExpensessItemLsitview extends StatelessWidget {
         date: 'April 2022',
         price: r'$20,129'),
   ];
+  int selectedindex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -31,9 +39,19 @@ class AllExpensessItemLsitview extends StatelessWidget {
         int index = e.key;
         var item = e.value;
         return Expanded(
-            child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: index == 1 ? 12 : 0),
-          child: AllexpensessItem(ItemModel: item, isSelected: false,),
+            child: GestureDetector(
+          onTap: () {
+            setState(() {
+              selectedindex=index;
+            });
+          },
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: index == 1 ? 12 : 0),
+            child: AllexpensessItem(
+              ItemModel: item,
+              isSelected: selectedindex == index,
+            ),
+          ),
         ));
       },
     ).toList());
