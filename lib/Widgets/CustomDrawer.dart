@@ -3,6 +3,7 @@ import 'package:responsive_dashboard/Widgets/DrawerItemsListView.dart';
 import 'package:responsive_dashboard/Widgets/InActiveDrawerItem.dart';
 import 'package:responsive_dashboard/Widgets/user_info_listtile.dart';
 import 'package:responsive_dashboard/models/Drawer_item_model.dart';
+import 'package:responsive_dashboard/models/User_info_model.dart';
 import 'package:responsive_dashboard/utils/Appimages.dart';
 
 class Customdrawer extends StatelessWidget {
@@ -16,9 +17,10 @@ class Customdrawer extends StatelessWidget {
         slivers: [
           SliverToBoxAdapter(
             child: UserInfoListtile(
-              image: Assets.imagesAvatar3,
-              title: 'Lekan Okeowo',
-              subtitle: 'demo@gmail.com',
+              userinfomodel: UserInfoModel(
+                  image: Assets.imagesAvatar3,
+                  title: 'Lekan Okeowo',
+                  subtitle: 'demo@gmail.com'),
             ),
           ),
           SliverToBoxAdapter(
