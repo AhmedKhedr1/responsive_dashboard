@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/Widgets/CustomTextfield.dart';
 import 'package:responsive_dashboard/Widgets/Custom_background_container.dart';
 import 'package:responsive_dashboard/Widgets/LatestTransaction.dart';
-import 'package:responsive_dashboard/Widgets/TitleTextField.dart';
+import 'package:responsive_dashboard/Widgets/QuickInvoice_form.dart';
 import 'package:responsive_dashboard/Widgets/quickInvoiceHeader.dart';
 
 class QuickInvoice extends StatelessWidget {
@@ -15,15 +14,13 @@ class QuickInvoice extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           quickInvoiceHeader(),
-          SizedBox(
-            height: 24,
-          ),
+          SizedBox(height: 12,),
           LatestTransaction(),
           Divider(
-            height: 48,
+            height: 38,
             color: Color(0xffF1f1f1),
           ),
-          Titletextfield(Title: 'Test', hint:'Test')
+          QuickinvoiceForm()
         ],
       ),
     );

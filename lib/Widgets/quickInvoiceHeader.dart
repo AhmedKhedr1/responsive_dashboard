@@ -14,8 +14,8 @@ class quickInvoiceHeader extends StatelessWidget {
           style: Appstyles.styleSemiBold20,
         ),
         Container(
-          width: 48,
-          height: 48,
+          width: 38,
+          height: 38,
           decoration: ShapeDecoration(
             color: Colors.white,
             shape: OvalBorder(),

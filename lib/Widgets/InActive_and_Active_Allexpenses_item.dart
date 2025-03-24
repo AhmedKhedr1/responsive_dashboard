@@ -29,14 +29,14 @@ class InActiveAllexpensesitem extends StatelessWidget {
             image: ItemModel.image,
           ),
           SizedBox(
-            height: 34,
+            height: 14,
           ),
           Text(
             ItemModel.title,
             style: Appstyles.styleMedium16,
           ),
           SizedBox(
-            height: 8,
+            height: 4,
           ),
           Text(
             ItemModel.date,
@@ -82,14 +82,14 @@ class ActiveAllexpensesitem extends StatelessWidget {
             image: ItemModel.image,
           ),
           SizedBox(
-            height: 34,
+            height: 14,
           ),
           Text(
             ItemModel.title,
             style: Appstyles.styleMedium16.copyWith(color: Colors.white),
           ),
           SizedBox(
-            height: 8,
+            height: 4,
           ),
           Text(
             ItemModel.date,
