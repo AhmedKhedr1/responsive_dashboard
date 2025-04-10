@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/Widgets/AllExpensess_and_Quickinvoice_Section.dart';
 import 'package:responsive_dashboard/Widgets/CustomDrawer.dart';
 import 'package:responsive_dashboard/Widgets/My_card_PageView.dart';
+import 'package:responsive_dashboard/Widgets/Mycard_section.dart';
 
 class Dashboarddesktoplayout extends StatelessWidget {
   const Dashboarddesktoplayout({super.key});
@@ -21,7 +22,7 @@ class Dashboarddesktoplayout extends StatelessWidget {
         SizedBox(
           width: 14,
         ),
-        Expanded(child: MyCardPageview())
+        Expanded(child: MycardSection())
       ],
     );
   }
