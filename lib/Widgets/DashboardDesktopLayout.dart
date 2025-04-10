@@ -26,10 +26,8 @@ class Dashboarddesktoplayout extends StatelessWidget {
             child: Column(
           children: [
             MycardandtransactionSection(),
-            SizedBox(
-              height: 16,
-            ),
-            IncomeSection(),
+            SizedBox(height: 12,),
+            Expanded(child: IncomeSection())
           ],
         ))
       ],
