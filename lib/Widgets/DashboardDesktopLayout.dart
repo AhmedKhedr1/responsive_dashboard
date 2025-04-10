@@ -3,6 +3,8 @@ import 'package:responsive_dashboard/Widgets/AllExpensess_and_Quickinvoice_Secti
 import 'package:responsive_dashboard/Widgets/CustomDrawer.dart';
 import 'package:responsive_dashboard/Widgets/My_card_PageView.dart';
 import 'package:responsive_dashboard/Widgets/Mycard_section.dart';
+import 'package:responsive_dashboard/Widgets/ThirdSection.dart';
+import 'package:responsive_dashboard/Widgets/Transaction_History.dart';
 
 class Dashboarddesktoplayout extends StatelessWidget {
   const Dashboarddesktoplayout({super.key});
@@ -22,7 +24,7 @@ class Dashboarddesktoplayout extends StatelessWidget {
         SizedBox(
           width: 14,
         ),
-        Expanded(child: MycardSection())
+        Expanded(child: Thirdsection())
       ],
     );
   }
