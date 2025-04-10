@@ -21,6 +21,5 @@ class ActiveDrawerItem extends StatelessWidget {
         decoration: BoxDecoration(color: Color(0xff4eb7f2)),
       ),
     );
-    ;
   }
 }

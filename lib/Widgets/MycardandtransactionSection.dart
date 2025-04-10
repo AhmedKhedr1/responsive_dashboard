@@ -3,8 +3,8 @@ import 'package:responsive_dashboard/Widgets/Custom_background_container.dart';
 import 'package:responsive_dashboard/Widgets/Mycard_section.dart';
 import 'package:responsive_dashboard/Widgets/Transaction_History.dart';
 
-class Thirdsection extends StatelessWidget {
-  const Thirdsection({super.key});
+class MycardandtransactionSection extends StatelessWidget {
+  const MycardandtransactionSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class Thirdsection extends StatelessWidget {
         children: [
           MycardSection(),
           Divider(
-            color:Color(0xffF1f1f1), 
+            color: Color(0xffF1f1f1),
             height: 40,
           ),
           TransactionHistory()
