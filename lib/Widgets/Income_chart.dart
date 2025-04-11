@@ -6,13 +6,17 @@ class IncomeChart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(
-      aspectRatio: 1,
-      child: PieChart(getchartdata()));
+    return Padding(
+      padding: const EdgeInsets.only(top: 44),
+      child: AspectRatio(
+        aspectRatio: 2,
+        child: PieChart(getchartdata())),
+    );
   }
 
   PieChartData getchartdata() {
     return PieChartData(
+      centerSpaceRadius: 30, 
       sectionsSpace: 0,      
       sections: [
         PieChartSectionData(

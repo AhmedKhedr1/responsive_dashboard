@@ -11,18 +11,19 @@ class Dashboarddesktoplayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Expanded(flex: 1, child: Customdrawer()),
+        Expanded(flex: 2, child: Customdrawer()),
         SizedBox(
           width: 16,
         ),
         Expanded(
-          flex: 2,
+          flex: 6,
           child: AllExpensess_and_Quickinvoice_Section(),
         ),
         SizedBox(
           width: 14,
         ),
         Expanded(
+          flex: 3,
             child: Column(
           children: [
             MycardandtransactionSection(),

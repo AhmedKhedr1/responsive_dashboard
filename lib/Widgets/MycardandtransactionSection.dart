@@ -14,7 +14,7 @@ class MycardandtransactionSection extends StatelessWidget {
           MycardSection(),
           Divider(
             color: Color(0xffF1f1f1),
-            height: 40,
+            height: 20,
           ),
           TransactionHistory()
         ],
