@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/Widgets/AllExpensess_and_Quickinvoice_Section.dart';
 import 'package:responsive_dashboard/Widgets/CustomDrawer.dart';
-import 'package:responsive_dashboard/Widgets/MycardandtransactionSection.dart';
-import 'package:responsive_dashboard/Widgets/income_section.dart';
+import 'package:responsive_dashboard/Widgets/DashboardMobileLayout.dart';
 
 class DashboardTabletlayout extends StatelessWidget {
   const DashboardTabletlayout({super.key});
@@ -17,23 +15,7 @@ class DashboardTabletlayout extends StatelessWidget {
           SizedBox(
             width: 22,
           ),
-          Expanded(
-              flex: 3,
-              child: SingleChildScrollView(
-                child: Column(
-                  children: [
-                    AllExpensess_and_Quickinvoice_Section(),
-                    SizedBox(
-                      height: 24,
-                    ),
-                    MycardandtransactionSection(),
-                    SizedBox(
-                      height: 24,
-                    ),
-                    IncomeSection()
-                  ],
-                ),
-              ))
+          Expanded(flex: 3, child: DashboardMobileLayout())
         ],
       ),
     );
