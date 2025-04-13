@@ -9,11 +9,15 @@ class IncomeSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Custom_Container(
-      child: Column(
-        children: [
-          IncomeSectionHeader(),
-          incomeSectionBody()
-        ],
+      child: SingleChildScrollView(
+       // physics: NeverScrollableScrollPhysics(),
+        child: Column(
+          children: [
+            IncomeSectionHeader(),
+            incomeSectionBody(),
+            SizedBox(height: 20,)
+          ],
+        ),
       ),
     );
   }

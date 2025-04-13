@@ -14,7 +14,7 @@ class IncomeSectionHeader extends StatelessWidget {
       children: [
         Text(
           'Income',
-          style: Appstyles.styleSemiBold20,
+          style: AppStyles.styleSemiBold20(context),
         ),
         Container(
           padding: EdgeInsets.all(6),
@@ -30,7 +30,7 @@ class IncomeSectionHeader extends StatelessWidget {
             children: [
               Text(
                 'Monthly',
-                style: Appstyles.styleMedium16,
+                style: AppStyles.styleMedium16(context),
               ),
               SizedBox(
                 width: 16,

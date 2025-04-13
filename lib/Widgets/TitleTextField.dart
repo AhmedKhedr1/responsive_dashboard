@@ -12,7 +12,7 @@ final String Title,hint;
       children: [
         Text(
           Title,
-          style: Appstyles.styleMedium16,
+          style: AppStyles.styleMedium16(context),
         ),
         SizedBox(
           height: 12,
