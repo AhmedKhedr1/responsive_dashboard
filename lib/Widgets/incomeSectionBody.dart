@@ -18,7 +18,12 @@ class incomeSectionBody extends StatelessWidget {
               incomDetails(),
             ],
           )
-        : Row(
+        : Column(
+            children: [
+              IncomeChart(),
+              incomDetails(),
+            ],
+          ); /* Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Expanded(
@@ -27,6 +32,6 @@ class incomeSectionBody extends StatelessWidget {
               ),
               Expanded(flex: 4, child: incomDetails())
             ],
-          );
+          );*/
   }
 }
