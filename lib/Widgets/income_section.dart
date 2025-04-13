@@ -10,12 +10,14 @@ class IncomeSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Custom_Container(
       child: SingleChildScrollView(
-       // physics: NeverScrollableScrollPhysics(),
+        // physics: NeverScrollableScrollPhysics(),
         child: Column(
           children: [
             IncomeSectionHeader(),
             incomeSectionBody(),
-            SizedBox(height: 20,)
+            SizedBox(
+              height: 20,
+            )
           ],
         ),
       ),

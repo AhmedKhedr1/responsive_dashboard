@@ -18,20 +18,15 @@ class incomeSectionBody extends StatelessWidget {
               incomDetails(),
             ],
           )
-        : Column(
-            children: [
-              IncomeChart(),
-              incomDetails(),
-            ],
-          ); /* Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
+        : Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Expanded(
                 flex: 2,
-                child: IncomeChart(),
+                child: Center(child: IncomeChart()),
               ),
               Expanded(flex: 4, child: incomDetails())
             ],
-          );*/
+          );
   }
 }

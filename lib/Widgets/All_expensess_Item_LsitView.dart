@@ -46,7 +46,7 @@ class _AllExpensessItemLsitviewState extends State<AllExpensessItemLsitview> {
             });
           },
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: index == 1 ? 12 : 0),
+            padding: EdgeInsets.symmetric(horizontal: index == 1 ? 2 : 0),
             child: AllexpensessItem(
               ItemModel: item,
               isSelected: selectedindex == index,
